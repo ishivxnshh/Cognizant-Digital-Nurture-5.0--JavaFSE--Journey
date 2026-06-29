@@ -39,6 +39,7 @@ For very large n, the simple iterative version (just a loop) is safer because it
 ## Run
 
 ```
+cd "c:\Users\Shivansh\Documents\Cognizant Digital Nurture 5.0 (JavaFSE) Journey\Exercise Solutions (By Cognizant)\Data structures and Algorithms\Exercise7-FinancialForecasting"
 javac *.java
 java ForecastTest
 ```

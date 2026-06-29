@@ -38,6 +38,7 @@ The trade-off is that binary search needs the array to be sorted. Linear search 
 ## Run
 
 ```
+cd "c:\Users\Shivansh\Documents\Cognizant Digital Nurture 5.0 (JavaFSE) Journey\Exercise Solutions (By Cognizant)\Data structures and Algorithms\Exercise2-EcommerceSearch"
 javac *.java
 java SearchTest
 ```
