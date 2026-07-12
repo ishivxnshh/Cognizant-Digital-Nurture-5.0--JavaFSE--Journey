@@ -1,0 +1,2 @@
+-- Exercise 1 - Scenario 2: VIP Promotion Based on Balance
+-- Set IsVIP flag to TRUE for customers with balance over $10,000
