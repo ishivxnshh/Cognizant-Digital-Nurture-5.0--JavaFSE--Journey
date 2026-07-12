@@ -1,0 +1,2 @@
+-- Exercise 3 - Scenario 2: Update Employee Bonus
+-- Update the salary of employees in a given department by adding a bonus percentage passed as a parameter

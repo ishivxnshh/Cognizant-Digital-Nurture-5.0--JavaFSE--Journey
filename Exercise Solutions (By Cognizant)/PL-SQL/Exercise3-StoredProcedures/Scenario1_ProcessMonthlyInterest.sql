@@ -1,0 +1,2 @@
+-- Exercise 3 - Scenario 1: Process Monthly Interest
+-- Calculate and update the balance of all savings accounts by applying 1% interest rate

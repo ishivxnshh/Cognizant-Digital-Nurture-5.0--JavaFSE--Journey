@@ -1,0 +1,2 @@
+-- Exercise 1 - Scenario 1: Loan Discount for Customers Above 60 Years Old
+-- Apply a 1% discount to loan interest rates for customers above 60 years old

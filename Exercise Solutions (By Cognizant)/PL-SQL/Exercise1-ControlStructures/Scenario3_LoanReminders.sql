@@ -1,0 +1,2 @@
+-- Exercise 1 - Scenario 3: Loan Reminders for Due Loans
+-- Send reminders to customers whose loans are due within the next 30 days
