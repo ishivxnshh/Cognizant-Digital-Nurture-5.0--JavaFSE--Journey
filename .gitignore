@@ -1,2 +1,5 @@
 # Compiled Java bytecode - not needed in version control
 *.class
+
+# Exercise solutions are tracked via their own branches, not main
+Exercise Solutions (By Cognizant)/
