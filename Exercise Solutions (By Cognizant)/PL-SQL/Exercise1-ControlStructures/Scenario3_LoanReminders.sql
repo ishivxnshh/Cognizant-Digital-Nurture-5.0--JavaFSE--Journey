@@ -1,19 +1,2 @@
-SET SERVEROUTPUT ON;
-
-DECLARE
-BEGIN
-    FOR l IN (
-        SELECT CustomerID, LoanID, DueDate
-        FROM Loans
-        WHERE DueDate BETWEEN SYSDATE AND SYSDATE + 30
-    ) LOOP
-
-        DBMS_OUTPUT.PUT_LINE(
-            'Reminder: Loan ' || l.LoanID ||
-            ' for Customer ' || l.CustomerID ||
-            ' is due on ' || TO_CHAR(l.DueDate, 'DD-MON-YYYY')
-        );
-
-    END LOOP;
-END;
-/
+-- Exercise 1 - Scenario 3: Loan Reminders for Due Loans
+-- Send reminders to customers whose loans are due within the next 30 days

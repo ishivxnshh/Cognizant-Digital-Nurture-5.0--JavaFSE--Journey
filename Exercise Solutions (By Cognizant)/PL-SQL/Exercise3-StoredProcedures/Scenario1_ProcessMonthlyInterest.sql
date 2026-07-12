@@ -1,23 +1,2 @@
--- Scenario 1
--- Process monthly interest for all savings accounts
-
-CREATE OR REPLACE PROCEDURE ProcessMonthlyInterest
-IS
-BEGIN
-    UPDATE Accounts
-    SET Balance = Balance + (Balance * 0.01)
-    WHERE AccountType = 'Savings';
-
-    COMMIT;
-END;
-/
-
--- Execute the procedure
-BEGIN
-    ProcessMonthlyInterest;
-END;
-/
-
--- Verify the result
-SELECT * FROM Accounts;
-
+-- Exercise 3 - Scenario 1: Process Monthly Interest
+-- Calculate and update the balance of all savings accounts by applying 1% interest rate

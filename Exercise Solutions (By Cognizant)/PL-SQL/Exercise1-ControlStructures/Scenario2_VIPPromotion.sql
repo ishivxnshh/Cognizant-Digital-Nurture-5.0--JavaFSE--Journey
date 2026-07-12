@@ -1,18 +1,2 @@
-DECLARE
-BEGIN
-    FOR c IN (
-        SELECT CustomerID, Balance
-        FROM Customers
-    ) LOOP
-
-        IF c.Balance > 10000 THEN
-            UPDATE Customers
-            SET IsVIP = TRUE
-            WHERE CustomerID = c.CustomerID;
-        END IF;
-
-    END LOOP;
-
-    COMMIT;
-END;
-/
+-- Exercise 1 - Scenario 2: VIP Promotion Based on Balance
+-- Set IsVIP flag to TRUE for customers with balance over $10,000
