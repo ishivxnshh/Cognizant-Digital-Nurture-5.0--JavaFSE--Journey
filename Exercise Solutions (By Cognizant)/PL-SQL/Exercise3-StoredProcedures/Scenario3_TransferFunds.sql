@@ -1,2 +1,0 @@
--- Exercise 3 - Scenario 3: Transfer Funds
--- Transfer a specified amount from one account to another, checking for sufficient balance in the source account
