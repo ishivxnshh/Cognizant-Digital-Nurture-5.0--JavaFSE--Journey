@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .form-box {
+            width: 400px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0 15px;
+            border: 1px solid #999;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+        }
+
+        output {
+            display: block;
+            margin-top: 15px;
+            color: green;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-box">
+        <h2>Event Registration</h2>
+
+        <form onsubmit="event.preventDefault(); result.value='Registration submitted successfully!';">
+
+            <label>Full Name:</label>
+            <input type="text" placeholder="Enter your name" required autofocus>
+
+            <label>Email:</label>
+            <input type="email" placeholder="Enter your email" required>
+
+            <label>Event Date:</label>
+            <input type="date" required>
+
+            <label>Event Type:</label>
+            <select required>
+                <option value="">Select an Event</option>
+                <option>Sports Day</option>
+                <option>Cultural Program</option>
+                <option>Workshop</option>
+                <option>Tree Plantation</option>
+            </select>
+
+            <label>Message:</label>
+            <textarea rows="4" placeholder="Write your message here..." required></textarea>
+
+            <input type="submit" value="Register">
+
+            <output name="result"></output>
+
+        </form>
+    </div>
+
+</body>
+</html>
