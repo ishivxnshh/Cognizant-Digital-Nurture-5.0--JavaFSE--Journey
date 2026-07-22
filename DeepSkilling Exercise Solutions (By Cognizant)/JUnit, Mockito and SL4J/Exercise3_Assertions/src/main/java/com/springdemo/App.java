@@ -3,6 +3,7 @@ package com.springdemo;
 public class App {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        String demoLabel = "JUnit Assertions Demo";
+        System.out.println("Running: " + demoLabel);
     }
 }

@@ -1,6 +1,6 @@
 package com.springdemo;
 
-public interface ExternalApi {
+public interface DataSource {
 
     String getData();
 }

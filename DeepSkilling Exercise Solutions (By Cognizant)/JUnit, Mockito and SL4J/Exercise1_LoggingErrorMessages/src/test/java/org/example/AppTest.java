@@ -15,6 +15,6 @@ public class AppTest extends TestCase {
     }
 
     public void testApp() {
-        assertTrue(true);
+        assertTrue("Sanity check — always passes", true);
     }
 }

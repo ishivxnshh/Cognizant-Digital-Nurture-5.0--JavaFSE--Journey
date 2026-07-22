@@ -6,25 +6,25 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class AAAExampleTest {
+public class AAAPatternDemoTest {
 
-    private int baseNumber;
+    private int initialValue;
 
     @BeforeEach
     public void setUp() {
-        System.out.println("Setting up...");
-        baseNumber = 10;
+        System.out.println("Initializing test state...");
+        initialValue = 10;
     }
 
     @AfterEach
     public void tearDown() {
-        System.out.println("Cleaning up...");
+        System.out.println("Test finished, resetting state...");
     }
 
     @Test
     public void testAddition() {
         // Arrange
-        int firstAddend = baseNumber;
+        int firstAddend  = initialValue;
         int secondAddend = 5;
 
         // Act
@@ -32,5 +32,18 @@ public class AAAExampleTest {
 
         // Assert
         assertEquals(15, sum);
+    }
+
+    @Test
+    public void testMultiplication() {
+        // Arrange
+        int factor     = initialValue;
+        int multiplier = 3;
+
+        // Act
+        int product = factor * multiplier;
+
+        // Assert
+        assertEquals(30, product);
     }
 }
