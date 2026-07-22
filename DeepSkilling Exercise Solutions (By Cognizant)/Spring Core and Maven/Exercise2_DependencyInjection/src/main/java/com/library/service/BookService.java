@@ -11,7 +11,8 @@ public class BookService {
     }
 
     public void display() {
-        System.out.println("BookService Bean Created Successfully");
+        System.out.println("BookService initialized successfully");
+        System.out.println("Available books: " + bookRepository.findAll());
         bookRepository.display();
     }
 }

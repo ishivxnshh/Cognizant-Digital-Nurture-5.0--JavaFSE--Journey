@@ -3,10 +3,13 @@ package com.library;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.printf("Hello and welcome!");
+        System.out.printf("Hello and welcome to the Library Management System!%n");
 
-        for (int counter = 1; counter <= 5; counter++) {
-            System.out.println("i = " + counter);
+        int totalBooks = 5;
+        for (int bookIndex = 1; bookIndex <= totalBooks; bookIndex++) {
+            System.out.println("Processing book entry #" + bookIndex);
         }
+
+        System.out.println("All entries processed.");
     }
 }

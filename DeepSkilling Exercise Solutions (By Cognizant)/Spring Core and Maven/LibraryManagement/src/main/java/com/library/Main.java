@@ -8,12 +8,16 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Main {
 
     public static void main(String[] args) {
+        System.out.println("Loading Spring application context...");
         ApplicationContext springContext = new ClassPathXmlApplicationContext("applicationContext.xml");
 
         BookRepository bookRepository = springContext.getBean("bookRepository", BookRepository.class);
         BookService bookService = springContext.getBean("bookService", BookService.class);
 
         bookRepository.display();
+        System.out.println("Catalog: " + bookRepository.findAll());
         bookService.display();
+
+        System.out.println("Application context loaded successfully.");
     }
 }
