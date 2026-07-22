@@ -1,8 +1,7 @@
 package com.library.service;
 
 public class BookService {
-
     public void display() {
-        System.out.println("BookService initialized successfully");
+        System.out.println("BookService bean created");
     }
 }
