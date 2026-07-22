@@ -1,2 +1,62 @@
-# Compiled Java bytecode - not needed in version control
+# ============================================================
+#  Java & Maven
+# ============================================================
+
+# Compiled bytecode
 *.class
+
+# Maven build output
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# Maven wrapper cache
+.mvn/wrapper/maven-wrapper.jar
+
+# JAR / WAR / EAR / ZIP artifacts
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# ============================================================
+#  IDE — IntelliJ IDEA
+# ============================================================
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# ============================================================
+#  IDE — VS Code
+# ============================================================
+.vscode/
+*.code-workspace
+
+# ============================================================
+#  IDE — Eclipse
+# ============================================================
+.classpath
+.project
+.settings/
+bin/
+
+# ============================================================
+#  OS & System
+# ============================================================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ============================================================
+#  Logs & Temp
+# ============================================================
+*.log
+*.tmp
+*.swp
