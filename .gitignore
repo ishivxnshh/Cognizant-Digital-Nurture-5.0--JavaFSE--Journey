@@ -1,4 +1,8 @@
-# Compiled class file
+# ============================================================
+#  Java & Maven
+# ============================================================
+
+# Compiled bytecode
 *.class
 
 # Log file
@@ -10,7 +14,7 @@
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
-# Package Files #
+# JAR / WAR / EAR / ZIP artifacts
 *.jar
 *.war
 *.nar
@@ -23,7 +27,7 @@
 hs_err_pid*
 replay_pid*
 
-# Maven
+# Maven build output
 target/
 pom.xml.tag
 pom.xml.releaseBackup
@@ -32,17 +36,37 @@ pom.xml.next
 release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
+
+# Maven wrapper cache
 .mvn/timing.properties
 .mvn/wrapper/maven-wrapper.jar
 
-# IDEs
+# ============================================================
+#  IDE - IntelliJ IDEA
+# ============================================================
 .idea/
-.vscode/
-*.iml
 *.iws
+*.iml
 *.ipr
+out/
 
-# OS generated files
+# ============================================================
+#  IDE - VS Code
+# ============================================================
+.vscode/
+*.code-workspace
+
+# ============================================================
+#  IDE - Eclipse
+# ============================================================
+.classpath
+.project
+.settings/
+bin/
+
+# ============================================================
+#  OS & System
+# ============================================================
 .DS_Store
 .DS_Store?
 ._*
@@ -50,3 +74,14 @@ buildNumber.properties
 .Trashes
 ehthumbs.db
 Thumbs.db
+desktop.ini
+
+# ============================================================
+#  Logs & Temp
+# ============================================================
+*.log
+*.tmp
+*.swp
+
+# Spring Boot Help file
+HELP.md
