@@ -60,3 +60,6 @@ desktop.ini
 *.log
 *.tmp
 *.swp
+
+# Spring Boot Help file
+HELP.md
