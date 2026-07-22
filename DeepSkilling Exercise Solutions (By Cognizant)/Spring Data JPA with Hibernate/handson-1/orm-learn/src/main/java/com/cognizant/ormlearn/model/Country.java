@@ -10,11 +10,14 @@ import jakarta.persistence.Table;
 public class Country {
 
     @Id
-    @Column(name = "co_code")
+    @Column(name = "code")
     private String code;
 
-    @Column(name = "co_name")
+    @Column(name = "name")
     private String name;
+
+    public Country() {
+    }
 
     public String getCode() {
         return code;
