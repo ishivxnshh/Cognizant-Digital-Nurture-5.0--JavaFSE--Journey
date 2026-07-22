@@ -1,27 +1,27 @@
 package com.springdemo;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertEquals;
 
 public class AAAPatternDemoTest {
 
     private int baseValue;
 
-    @BeforeEach
-    void setUp() {
+    @Before
+    public void setUp() {
         baseValue = 10;
     }
 
-    @AfterEach
-    void tearDown() {
+    @After
+    public void tearDown() {
         System.out.println("test done");
     }
 
     @Test
-    void testAddition() {
+    public void testAddition() {
         // Arrange
         int num = baseValue;
         int toAdd = 5;
@@ -34,7 +34,7 @@ public class AAAPatternDemoTest {
     }
 
     @Test
-    void testMultiplication() {
+    public void testMultiplication() {
         int result = baseValue * 3;
         assertEquals(30, result);
     }
