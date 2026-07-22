@@ -1,0 +1,28 @@
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~
+$ cd ~/Documents/GitDemo
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ git branch -a
+* main
+  remotes/origin/main
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ git pull origin main
+From https://github.com/ishivxnshh/GitDemo
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ git push origin main
+Everything up-to-date
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$

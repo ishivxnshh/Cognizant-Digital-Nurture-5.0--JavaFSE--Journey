@@ -1,0 +1,81 @@
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~
+$ cd ~/Documents/GitDemo
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ touch error.log
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ echo "Error Log" > error.log
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ mkdir log
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ echo "Test Log" > log/test.txt
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        error.log
+        log/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ touch .gitignore
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ code .gitignore
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ git add .gitignore
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ git commit -m "Add gitignore"
+[main ad7b5dc] Add gitignore
+ 1 file changed, 2 insertions(+)
+ create mode 100644 .gitignore
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 322 bytes | 322.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/ishivxnshh/GitDemo.git
+   4af5236..ad7b5dc  main -> main
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$
