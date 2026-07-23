@@ -85,3 +85,7 @@ desktop.ini
 
 # Spring Boot Help file
 HELP.md
+
+# Node
+node_modules/
+build/
