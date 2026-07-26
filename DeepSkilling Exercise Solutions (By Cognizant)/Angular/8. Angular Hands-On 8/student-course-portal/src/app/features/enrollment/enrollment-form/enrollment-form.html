@@ -1,0 +1,89 @@
+<div class="form-container">
+  <h2>Student Enrollment Form</h2>
+
+  <div *ngIf="successMessage" class="success-message">
+    {{ successMessage }}
+  </div>
+
+  <form #enrollForm="ngForm" (ngSubmit)="onSubmit()">
+    
+    <div class="form-group">
+      <label for="name">Student Name</label>
+      <input 
+        type="text" 
+        id="name" 
+        name="name" 
+        [(ngModel)]="student.name" 
+        required 
+        minlength="3" 
+        #nameField="ngModel">
+      
+      <div *ngIf="nameField.invalid && (nameField.dirty || nameField.touched)" class="error-message">
+        <span *ngIf="nameField.errors?.['required']">Student Name is required.</span>
+        <span *ngIf="nameField.errors?.['minlength']">Minimum 3 characters required.</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input 
+        type="email" 
+        id="email" 
+        name="email" 
+        [(ngModel)]="student.email" 
+        required 
+        email 
+        #emailField="ngModel">
+      
+      <div *ngIf="emailField.invalid && (emailField.dirty || emailField.touched)" class="error-message">
+        <span *ngIf="emailField.errors?.['required']">Email is required.</span>
+        <span *ngIf="emailField.errors?.['email']">Enter a valid email address.</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="courseId">Course ID</label>
+      <input 
+        type="text" 
+        id="courseId" 
+        name="courseId" 
+        [(ngModel)]="student.courseId" 
+        required 
+        #courseIdField="ngModel">
+      
+      <div *ngIf="courseIdField.invalid && (courseIdField.dirty || courseIdField.touched)" class="error-message">
+        <span *ngIf="courseIdField.errors?.['required']">Course ID is required.</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="semester">Semester</label>
+      <input 
+        type="text" 
+        id="semester" 
+        name="semester" 
+        [(ngModel)]="student.semester" 
+        required 
+        #semesterField="ngModel">
+      
+      <div *ngIf="semesterField.invalid && (semesterField.dirty || semesterField.touched)" class="error-message">
+        <span *ngIf="semesterField.errors?.['required']">Semester is required.</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="comments">Comments</label>
+      <textarea 
+        id="comments" 
+        name="comments" 
+        [(ngModel)]="student.comments">
+      </textarea>
+    </div>
+
+    <div class="button-group">
+      <button type="submit" [disabled]="enrollForm.invalid">Submit</button>
+      <button type="button" class="reset-btn" (click)="onReset()">Reset</button>
+    </div>
+
+  </form>
+</div>
