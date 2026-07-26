@@ -1,0 +1,7 @@
+<div class="card" *ngIf="course">
+  <h3>{{ course.name }} ({{ course.code }})</h3>
+  <p>Credits: {{ course.credits }}</p>
+  <button (click)="onEnrollClick()" [ngStyle]="{'background-color': enrollmentService.isEnrolled(course.id) ? '#d32f2f' : '#004d40'}">
+    {{ enrollmentService.isEnrolled(course.id) ? 'Unenroll' : 'Enroll' }}
+  </button>
+</div>
