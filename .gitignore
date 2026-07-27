@@ -60,3 +60,21 @@ desktop.ini
 *.log
 *.tmp
 *.swp
+
+# ============================================================
+#  Node & Angular & Frontend
+# ============================================================
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+.angular/
+**/.angular/
+.cache/
+**/.cache/
+*.tsbuildinfo
+**/*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
