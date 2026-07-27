@@ -1,0 +1,30 @@
+<div class="home-container">
+  <h1>Welcome to {{ portalName }}</h1>
+  <p>A simple portal where students can browse courses, manage enrollments and view their academic profile.</p>
+  
+  <div class="stats-grid">
+    <div class="stat-card">
+      <h3>Courses Available: 12</h3>
+    </div>
+    <div class="stat-card">
+      <h3>Enrolled: 3</h3>
+    </div>
+    <div class="stat-card">
+      <h3>GPA: 3.8</h3>
+    </div>
+  </div>
+
+  <hr style="margin: 2rem 0; border: none; border-top: 1px solid #ddd;" />
+
+  <div class="actions">
+    <div style="margin-bottom: 1.5rem;">
+      <button [disabled]="!isPortalActive" (click)="onEnrollClick()">Enroll Now</button>
+      <p style="color: green; font-weight: bold;">{{ message }}</p>
+    </div>
+
+    <div>
+      <input type="text" [(ngModel)]="searchTerm" placeholder="Search..." />
+      <p>Searching for: {{ searchTerm }}</p>
+    </div>
+  </div>
+</div>

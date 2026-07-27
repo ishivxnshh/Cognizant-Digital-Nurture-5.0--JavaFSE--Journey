@@ -1,0 +1,27 @@
+<div class="course-list-container">
+  <h2>Available Courses (API)</h2>
+  <p *ngIf="currentSearch">Current Search: <strong>{{ currentSearch }}</strong></p>
+  <p *ngIf="errorMessage" style="color: red; font-weight: bold;">{{ errorMessage }}</p>
+
+  <div class="form-container" style="margin-bottom: 20px; padding: 15px; border: 1px solid #ccc; border-radius: 4px; background: #fff;">
+    <h3>{{ isEditing ? 'Edit' : 'Add' }} Course</h3>
+    <form (ngSubmit)="onSubmit()" style="display: flex; gap: 10px; align-items: center;">
+      <input type="text" [(ngModel)]="newCourse.name" name="name" placeholder="Course Name" required style="padding: 8px; flex: 1;" />
+      <input type="text" [(ngModel)]="newCourse.code" name="code" placeholder="Course Code" required style="padding: 8px; flex: 1;" />
+      <button type="submit" style="padding: 8px 15px; background: #004d40; color: white; border: none; cursor: pointer;">{{ isEditing ? 'Update' : 'Add' }}</button>
+      <button type="button" *ngIf="isEditing" (click)="resetForm()" style="padding: 8px 15px; cursor: pointer;">Cancel</button>
+    </form>
+  </div>
+  
+  <div class="cards-grid">
+    <div *ngFor="let c of courses" (click)="goToCourse(c.id)" style="cursor: pointer; position: relative; border: 1px solid #eee; margin-bottom: 15px; border-radius: 8px; background: white; padding-bottom: 40px;">
+      <app-course-card [course]="c"></app-course-card>
+      
+      <!-- CRUD Actions Toolbar -->
+      <div style="position: absolute; bottom: 10px; right: 10px; z-index: 10; display: flex; gap: 8px;">
+        <button (click)="editCourse(c, $event)" style="padding: 5px 10px; cursor: pointer;">Edit</button>
+        <button (click)="deleteCourse(c.id, $event)" style="background-color: #d32f2f; color: white; padding: 5px 10px; border: none; cursor: pointer; border-radius: 3px;">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
