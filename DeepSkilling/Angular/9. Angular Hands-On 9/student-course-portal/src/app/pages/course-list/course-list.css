@@ -1,0 +1,17 @@
+.course-list-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+.cards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 600px;
+}
+.selected-id {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #e8f5e9;
+  border-left: 4px solid #004d40;
+  font-weight: bold;
+}

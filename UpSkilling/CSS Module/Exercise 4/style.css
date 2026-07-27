@@ -1,0 +1,33 @@
+/* Body Styling */
+body {
+    background-color: #e6f2ff;               /* Fallback color */
+    background-image: url("background.jpg"); /* Background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Header Styling */
+header {
+    background-color: rgba(0, 102, 204, 0.8); /* RGBA color */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Section Heading */
+h2 {
+    background: linear-gradient(to right, #007BFF, #00C6FF);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Paragraph Styling */
+p {
+    color: #333333; /* HEX color */
+    font-size: 18px;
+}

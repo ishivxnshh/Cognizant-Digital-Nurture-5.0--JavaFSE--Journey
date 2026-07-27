@@ -1,0 +1,130 @@
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~
+$ cd ~/Documents/GitDemo
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ git branch
+* main
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ git branch GitNewBranch
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ git branch -a
+  GitNewBranch
+* main
+  remotes/origin/main
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ git checkout GitNewBranch
+Switched to branch 'GitNewBranch'
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (GitNewBranch)
+$ git branch
+* GitNewBranch
+  main
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (GitNewBranch)
+$ echo "This is my new branch" > branch.txt
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (GitNewBranch)
+$ cat branch.txt
+This is my new branch
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (GitNewBranch)
+$ git add branch.txt
+warning: in the working copy of 'branch.txt', LF will be replaced by CRLF the ne
+xt time Git touches it
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (GitNewBranch)
+$ git commit -m "Add branch.txt in GitNewBranch"
+[GitNewBranch c8ce6f3] Add branch.txt in GitNewBranch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 branch.txt
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (GitNewBranch)
+$ git status
+On branch GitNewBranch
+nothing to commit, working tree clean
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (GitNewBranch)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ git diff main GitNewBranch
+diff --git a/branch.txt b/branch.txt
+new file mode 100644
+index 0000000..388da8a
+--- /dev/null
++++ b/branch.txt
+@@ -0,0 +1 @@
++This is my new branch
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ git diff master GitNewBranch
+fatal: ambiguous argument 'master': unknown revision or path not in the working
+tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ git merge GitNewBranch
+Updating ad7b5dc..c8ce6f3
+Fast-forward
+ branch.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 branch.txt
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ git log --oneline --graph --decorate
+* c8ce6f3 (HEAD -> main, GitNewBranch) Add branch.txt in GitNewBranch
+* ad7b5dc (origin/main) Add gitignore
+* 4af5236 Create file with Welcome text
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ git branch -d GitNewBranch
+Deleted branch GitNewBranch (was c8ce6f3).
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ git branch
+* main
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~
+$ cd ~/Documents/GitDemo
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ git branch
+* main
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 379 bytes | 379.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/ishivxnshh/GitDemo.git
+   ad7b5dc..c8ce6f3  main -> main
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$
