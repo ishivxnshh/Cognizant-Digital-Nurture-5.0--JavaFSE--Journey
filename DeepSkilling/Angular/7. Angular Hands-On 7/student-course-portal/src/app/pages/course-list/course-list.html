@@ -1,0 +1,13 @@
+<div class="course-list-container">
+  <h2>Available Courses</h2>
+  <p *ngIf="currentSearch">Current Search: <strong>{{ currentSearch }}</strong></p>
+  
+  <div class="cards-grid">
+    <app-course-card 
+      *ngFor="let c of courses" 
+      [course]="c"
+      (click)="goToCourse(c.id)"
+      style="cursor: pointer;">
+    </app-course-card>
+  </div>
+</div>

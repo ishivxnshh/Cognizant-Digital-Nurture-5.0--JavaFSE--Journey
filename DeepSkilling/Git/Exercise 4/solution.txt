@@ -1,0 +1,157 @@
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~
+$ cd ~/Documents/GitDemo
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (GitWork)
+$ git status
+On branch GitWork
+nothing to commit, working tree clean
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (GitWork)
+$ git checkout -b GitWork
+fatal: a branch named 'GitWork' already exists
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (GitWork)
+$ git branch
+* GitWork
+  main
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (GitWork)
+$ echo "<message>Hello from GitWork branch</message>" > hello.xml
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (GitWork)
+$ cat hello.xml
+<message>Hello from GitWork branch</message>
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (GitWork)
+$ git add hello.xml
+warning: in the working copy of 'hello.xml', LF will be replaced by CRLF the nex
+t time Git touches it
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (GitWork)
+$ git commit -m "Add hello.xml in GitWork"
+[GitWork 80375a1] Add hello.xml in GitWork
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello.xml
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (GitWork)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ echo "<message>Hello from Main branch</message>" > hello.xml
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ cat hello.xml
+<message>Hello from Main branch</message>
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ git add hello.xml
+warning: in the working copy of 'hello.xml', LF will be replaced by CRLF the nex
+t time Git touches it
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ git commit -m "Add hello.xml in main"
+[main df6a589] Add hello.xml in main
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello.xml
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ git log --oneline --graph --decorate --all
+* df6a589 (HEAD -> main) Add hello.xml in main
+| * 80375a1 (GitWork) Add hello.xml in GitWork
+|/
+* c8ce6f3 (origin/main) Add branch.txt in GitNewBranch
+* ad7b5dc Add gitignore
+* 4af5236 Create file with Welcome text
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ git log --oneline --graph --decorate --all
+* df6a589 (HEAD -> main) Add hello.xml in main
+| * 80375a1 (GitWork) Add hello.xml in GitWork
+|/
+* c8ce6f3 (origin/main) Add branch.txt in GitNewBranch
+* ad7b5dc Add gitignore
+* 4af5236 Create file with Welcome text
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ git diff main GitWork
+diff --git a/hello.xml b/hello.xml
+index 2f47d4e..0bf4c19 100644
+--- a/hello.xml
++++ b/hello.xml
+@@ -1 +1 @@
+-<message>Hello from Main branch</message>
++<message>Hello from GitWork branch</message>
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ git merge GitWork
+Auto-merging hello.xml
+CONFLICT (add/add): Merge conflict in hello.xml
+Automatic merge failed; fix conflicts and then commit the result.
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main|MERGING)
+$ code .
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main|MERGING)
+$ git add hello.xml
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main|MERGING)
+$ git commit -m "Resolve merge conflict"
+[main 55f8cb9] Resolve merge conflict
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ code .gitignore
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ git add .gitignore
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ git commit -m "Ignore backup files"
+[main 1de6d70] Ignore backup files
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ git branch
+  GitWork
+* main
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ git branch -d GitWork
+Deleted branch GitWork (was 80375a1).
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ git log --oneline --graph --decorate
+* 1de6d70 (HEAD -> main) Ignore backup files
+*   55f8cb9 Resolve merge conflict
+|\
+| * 80375a1 Add hello.xml in GitWork
+* | df6a589 Add hello.xml in main
+|/
+* c8ce6f3 (origin/main) Add branch.txt in GitNewBranch
+* ad7b5dc Add gitignore
+* 4af5236 Create file with Welcome text
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ git push
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (12/12), 1.12 KiB | 384.00 KiB/s, done.
+Total 12 (delta 6), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (6/6), completed with 1 local object.
+To https://github.com/ishivxnshh/GitDemo.git
+   c8ce6f3..1de6d70  main -> main
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$

@@ -1,0 +1,15 @@
+<div class="card" *ngIf="course">
+  <h3>{{ course.name }} ({{ course.code }})</h3>
+  <p>Credits: {{ course.credits }}</p>
+  <button *ngIf="isEnrolled$ | async as isEnrolled; else enrollBtn" 
+          (click)="$event.stopPropagation(); onEnrollClick(isEnrolled)" 
+          [ngStyle]="{'background-color': '#d32f2f'}">
+    Unenroll
+  </button>
+  <ng-template #enrollBtn>
+    <button (click)="$event.stopPropagation(); onEnrollClick(false)" 
+            [ngStyle]="{'background-color': '#004d40'}">
+      Enroll
+    </button>
+  </ng-template>
+</div>

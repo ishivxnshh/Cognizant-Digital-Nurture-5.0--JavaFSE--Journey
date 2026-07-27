@@ -1,0 +1,13 @@
+<div class="profile-container" style="padding: 20px; font-family: Arial, sans-serif;">
+  <h2 style="color: #004d40;">My Enrolled Courses</h2>
+  <div *ngIf="enrolledCourses.length > 0; else noCourses">
+    <ul style="list-style-type: none; padding: 0;">
+      <li *ngFor="let course of enrolledCourses" style="padding: 10px; border: 1px solid #ddd; margin-bottom: 8px; border-radius: 4px; background-color: #f9f9f9;">
+        <strong>{{ course.name }}</strong> ({{ course.code }})
+      </li>
+    </ul>
+  </div>
+  <ng-template #noCourses>
+    <p style="color: #555;">No enrolled courses.</p>
+  </ng-template>
+</div>

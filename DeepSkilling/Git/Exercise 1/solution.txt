@@ -1,0 +1,65 @@
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~
+$ cd Documents
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents
+$ mkdir GitDemo
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents
+$ cd GitDemo
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo
+$ git init
+Initialized empty Git repository in C:/Users/Shivansh/Documents/GitDemo/.git/
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (master)
+$ code .
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (master)
+$ touch welcome.txt
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (master)
+$ echo "Welcome to Git" > welcome.txt
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (master)
+$ git add welcome.txt
+warning: in the working copy of 'welcome.txt', LF will be replaced by CRLF the n
+ext time Git touches it
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (master)
+$ git commit -m "Create file with Welcome text"
+[master (root-commit) 4af5236] Create file with Welcome text
+ 1 file changed, 1 insertion(+)
+ create mode 100644 welcome.txt
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (master)
+$ https://github.com/ishivxnshh/GitDemo.git
+bash: https://github.com/ishivxnshh/GitDemo.git: No such file or directory
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (master)
+$ git remote add origin https://github.com/ishivxnshh/GitDemo.git
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (master)
+$ git remote -v
+origin  https://github.com/ishivxnshh/GitDemo.git (fetch)
+origin  https://github.com/ishivxnshh/GitDemo.git (push)
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (master)
+$ git branch -M main
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$ git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 271 bytes | 271.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/ishivxnshh/GitDemo.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+Shivansh@DESKTOP-OMVLURQ MINGW64 ~/Documents/GitDemo (main)
+$
